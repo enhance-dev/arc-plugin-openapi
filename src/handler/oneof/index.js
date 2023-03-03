@@ -3,9 +3,6 @@ module.exports = {
     const { proxy } = req.pathParameters
 
     let spec = (await import(`@architect/views/models/openapi/${proxy}.mjs`)).default
-    let model = await import(`@architect/views/models/schemas/${proxy}.mjs`)
-
-    spec.components.schemas = { ...model }
 
     return {
       statusCode: 200,

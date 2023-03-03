@@ -7,8 +7,6 @@ module.exports = {
 
     await Promise.all(openapiFiles.map(async (file) => {
       let spec = (await import(`@architect/views/models/openapi/${file}`)).default
-      let model = await import(`@architect/views/models/schemas/${file}`)
-      spec.components.schemas = { ...model }
       specs.push({oas: spec})
     }));
 
