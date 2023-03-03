@@ -11,7 +11,6 @@ module.exports = {
     }));
 
     let { merge, isErrorResult } = await import('openapi-merge')
-    console.log("specs", specs)
     const mergeResult = merge(specs)
     if (isErrorResult(mergeResult)) {
       console.error(`${mergeResult.message} (${mergeResult.type})`);
