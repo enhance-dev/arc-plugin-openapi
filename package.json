@@ -1,6 +1,6 @@
 {
   "name": "@enhance/arc-plugin-openapi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adds OpenAPI routes to Enhance Project",
   "main": "src/index.js",
   "scripts": {
